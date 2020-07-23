@@ -32,13 +32,13 @@ else
 {
 	// If filter variable is not set, we
 	// automatically show all queries
-	$showing = "showing";
+	$showing = "pokazuje";
 }
 
 $showall = false;
 if(isset($_GET["all"]))
 {
-	$showing .= " all queries within the Pi-hole log";
+	$showing .= " wszystkie zapytania w dzienniku Pi-hole";
 }
 else if(isset($_GET["client"]))
 {
@@ -54,7 +54,7 @@ else if(isset($_GET["from"]) || isset($_GET["until"]))
 }
 else
 {
-	$showing .= " up to 100 queries";
+	$showing .= " do 100 zapytań";
 	$showall = true;
 }
 
@@ -71,7 +71,7 @@ if(strlen($showing) > 0)
 {
 	$showing = "(".$showing.")";
 	if($showall)
-		$showing .= ", <a href=\"?all\">show all</a>";
+		$showing .= ", <a href=\"?all\">pokaż wsztstko</a>";
 }
 ?>
 
