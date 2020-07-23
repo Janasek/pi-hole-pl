@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Strona powitalna</title>
+<style type="text/css" media="screen">
+body { background: #e7e7e7; font-family: Verdana, sans-serif; font-size: 11pt; }
+#page { background: #ffffff; margin: 50px; border: 2px solid #c0c0c0; padding: 10px; }
+#header { background: #4b6983; border: 2px solid #7590ae; text-align: center; padding: 10px; color: #ffffff; }
+#header h1 { color: #ffffff; }
+#body { padding: 10px; }
+span.tt { font-family: monospace; }
+span.bold { font-weight: bold; }
+a:link { text-decoration: none; font-weight: bold; color: #C00; background: #ffc; }
+a:visited { text-decoration: none; font-weight: bold; color: #999; background: #ffc; }
+a:active { text-decoration: none; font-weight: bold; color: #F00; background: #FC0; }
+a:hover { text-decoration: none; color: #C00; background: #FC0; }
+</style>
+</head>
+<body>
+<div id="page">
+ <div id="header">
+ <h1> Strona zastępcza </h1>
+  Właściciel tej witryny nie utworzył jeszcze żadnych stron internetowych. Proszę sprawdzić później.
+ </div>
+ <div id="body">
+  <h2>You should replace this page with your own web pages as soon as possible.</h2>
+  Unless you changed its configuration, your new server is configured as follows:
+  <ul>
+   <li>Configuration files can be found in <span class="tt">/etc/lighttpd</span>. Please read  <span class="tt">/etc/lighttpd/conf-available/README</span> file.</li>
+   <li>The DocumentRoot, which is the directory under which all your HTML files should exist, is set to <span class="tt">/var/www/html</span>.</li>
+   <li>CGI scripts are looked for in <span class="tt">/usr/www/cgi-bin</span>, which is where Ubuntu packages will place their scripts. You can enable cgi module by using command <span class="bold tt">&quot;lighty-enable-mod cgi&quot;</span>.</li>
+   <li>Log files are placed in <span class="tt">/var/log/lighttpd</span>, and will be rotated weekly. The frequency of rotation can be easily changed by editing <span class="tt">/etc/logrotate.d/lighttpd</span>.</li>
+   <li>The default directory index is <span class="tt">index.html</span>, meaning that requests for a directory <span class="tt">/foo/bar/</span> poda zawartość pliku /var/www/foo/bar/index.html jeśli istnieje (przy założeniu, że <span class="tt">/var/www</span> to Twój Document Root).</li>
+   <li>Możesz włączyć katalogi użytkownika za pomocą polecenia <span class="bold tt">&quot;lighty-enable-mod userdir&quot;</span></li>
+  </ul>
+  <h2>O tej stronie</h2>
+  <p>
+   To jest strona zastępcza zainstalowana w wydaniu Ubuntu <a href="http://packages.ubuntu.com/lighttpd">Pakietu serwera Lighttpd.</a>
+  </p>
+  <p>
+   Ten komputer ma zainstalowany system operacyjny Ubuntu, ale nie ma to nic wspólnego z projektem Ubuntu. Prosimy nie kontaktować się w tej sprawie z Projektem Ubuntu.
+  </p>
+  <p>
+   Jeśli znajdziesz błąd w tym pakiecie Lighttpd lub w samym Lighttpd, prosimy o zgłoszenie błędu. Instrukcje, jak to zrobić, oraz listę znanych błędów tego pakietu można znaleźć w pliku 
+   <a href="https://bugs.launchpad.net/ubuntu/+source/lighttpd">System śledzenia błędów Ubuntu.</a>
+  </p>
+ </div>
+</div>
+<!-- s:853e9a42efca88ae0dd1a83aeb215047 -->
+</body>
+</html>
