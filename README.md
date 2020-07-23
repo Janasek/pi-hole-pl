@@ -11,7 +11,7 @@ Wpisz następujące polecenia w SSH, linia po linii, lub skopiuj i wklej całoś
 ```
 cd /var/www/
 sudo git clone https://github.com/Janasek/pi-hole-pl.git
-sudo cp -fR ./pi-hole-darkstylevpl/html /var/www
+sudo cp -fR ./pi-hole-pl/html /var/www
 sudo rm -rf pi-hole-pl
 ```
 # Czasami przeglądarka wymaga czyszczenia aby uzyskać i wyświetlić wszystkie zmiany
