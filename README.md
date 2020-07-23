@@ -2,7 +2,7 @@
 
 [pi-hole](https://github.com/pi-hole/pi-hole).
 
-![Screenshot](https://i.ibb.co/qd65g2Q/pi-hole.png)
+![Screenshot](https://i.ibb.co/yWNkGtS/2020-07-23-14h19-45.png)
 
 
 ## Instalacja
@@ -32,3 +32,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 ### Warning, this is the Polish version, do not install if you want to keep the original English language because it converts English to Polish
+
+## Enjoy
