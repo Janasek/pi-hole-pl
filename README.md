@@ -1,4 +1,4 @@
-# pi-hole-pl
+# Kompatybilne z wersją Pi-hole v5.1.1 Interfejs sieciowy v5.1  FTL v5.1
 
 [pi-hole](https://github.com/pi-hole/pi-hole).
 
