@@ -58,7 +58,7 @@ if (isset($_POST["submit"])) {
     <div id="alError" class="alert alert-danger alert-dismissible fade in" role="alert">
         <button type="button" class="close" data-hide="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
         </button>
-        <h4><i class="icon fa fa-ban"></i> Error</h4>
+        <h4><i class="icon fa fa-ban"></i> Błśd</h4>
         <?php echo $error; ?>
     </div>
 <?php } ?>
@@ -233,7 +233,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                     <a href="#sysadmin" aria-controls="sysadmin" aria-expanded="<?php echo $tab === "sysadmin" ? "true" : "false"; ?>" role="tab" data-toggle="tab">System</a>
                 </li>
                 <li role="presentation"<?php if($tab === "adlists"){ ?> class="active"<?php } ?>>
-                    <a href="#adlists" aria-controls="adlists" aria-expanded="<?php echo $tab === "adlists" ? "true" : "false"; ?>" role="tab" data-toggle="tab">Adlists</a>
+                    <a href="#adlists" aria-controls="adlists" aria-expanded="<?php echo $tab === "adlists" ? "true" : "false"; ?>" role="tab" data-toggle="tab">Listy reklam</a>
                 </li>
                 <li role="presentation"<?php if($tab === "dns"){ ?> class="active"<?php } ?>>
                     <a href="#dns" aria-controls="dns" aria-expanded="<?php echo $tab === "dns" ? "true" : "false"; ?>" role="tab" data-toggle="tab">DNS</a>
@@ -245,7 +245,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                     <a href="#api" aria-controls="api" aria-expanded="<?php echo $tab === "api" ? "true" : "false"; ?>" role="tab" data-toggle="tab">API / Web interface</a>
                 </li>
                 <li role="presentation"<?php if($tab === "privacy"){ ?> class="active"<?php } ?>>
-                    <a href="#privacy" aria-controls="privacy" aria-expanded="<?php echo $tab === "privacy" ? "true" : "false"; ?>" role="tab" data-toggle="tab">Privacy</a>
+                    <a href="#privacy" aria-controls="privacy" aria-expanded="<?php echo $tab === "privacy" ? "true" : "false"; ?>" role="tab" data-toggle="tab">Prywatność</a>
                 </li>
                 <li role="presentation"<?php if($tab === "teleporter"){ ?> class="active"<?php } ?>>
                     <a href="#teleporter" aria-controls="teleporter" aria-expanded="<?php echo $tab === "teleporter" ? "true" : "false"; ?>" role="tab" data-toggle="tab">Teleporter</a>
@@ -258,7 +258,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                         <div class="col-md-6">
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Network Information</h3>
+                                    <h3 class="box-title">Informacje o sieci</h3>
                                 </div>
                                 <div class="box-body">
                                     <div class="row">
@@ -266,19 +266,19 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                             <table class="table table-striped table-bordered nowrap">
                                                 <tbody>
                                                 <tr>
-                                                    <th scope="row">Pi-hole Ethernet Interface:</th>
+                                                    <th scope="row">Interfejs Ethernet Pi-hole:</th>
                                                     <td><?php echo htmlentities($piHoleInterface); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Pi-hole IPv4 address:</th>
+                                                    <th scope="row">Adres IPv4 Pi-hole:</th>
                                                     <td><?php echo htmlentities($piHoleIPv4); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Pi-hole IPv6 address:</th>
+                                                    <th scope="row">Adres IPv6 Pi-hole:</th>
                                                     <td class="breakall"><?php echo htmlentities($piHoleIPv6); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Pi-hole hostname:</th>
+                                                    <th scope="row">Nazwa hosta Pi-hole:</th>
                                                     <td><?php echo htmlentities($hostname); ?></td>
                                                 </tr>
                                                 </tbody>
@@ -291,7 +291,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                         <div class="col-md-6">
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">FTL Information</h3>
+                                    <h3 class="box-title">Informacje FTL</h3>
                                 </div>
                                 <div class="box-body">
                                     <div class="row">
@@ -309,58 +309,58 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                             <table class="table table-striped table-bordered nowrap">
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="row">FTL version:</th>
+                                                        <th scope="row">Wersja FTL:</th>
                                                         <td><?php echo $FTLversion; ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">Process identifier (PID):</th>
+                                                        <th scope="row">Identyfikator procesu (PID):</th>
                                                         <td><?php echo $FTLpid; ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">Time FTL started:</th>
+                                                        <th scope="row">Czas rozpoczęcia FTL:</th>
                                                         <td><?php print_r(get_FTL_data("start")); ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">User / Group:</th>
+                                                        <th scope="row">Użutkownik / Grupa:</th>
                                                         <td><?php print_r(get_FTL_data("euser")); ?> / <?php print_r(get_FTL_data("egroup")); ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">Total CPU utilization:</th>
+                                                        <th scope="row">Całkowite wykorzystanie procesora:</th>
                                                         <td><?php print_r(get_FTL_data("%cpu")); ?>%</td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">Memory utilization:</th>
+                                                        <th scope="row">Wykorzystanie pamięci:</th>
                                                         <td><?php print_r(get_FTL_data("%mem")); ?>%</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
-                                                            <span title="Resident memory is the portion of memory occupied by a process that is held in main memory (RAM). The rest of the occupied memory exists in the swap space or file system.">Used memory:</span>
+                                                            <span title="Resident memory is the portion of memory occupied by a process that is held in main memory (RAM). The rest of the occupied memory exists in the swap space or file system.">Używana pamięć:</span>
                                                         </th>
                                                         <td><?php echo formatSizeUnits(1e3 * floatval(get_FTL_data("rss"))); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
-                                                            <span title="Size of the DNS domain cache">DNS cache size:</span>
+                                                            <span title="Size of the DNS domain cache">Rozmiar pamięci podręcznej DNS:</span>
                                                         </th>
                                                         <td id="cache-size">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
-                                                            <span title="Number of cache insertions">DNS cache insertions:</span>
+                                                            <span title="Number of cache insertions">Wstawienia pamięci podręcznej DNS:</span>
                                                         </th>
                                                         <td id="cache-inserted">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
-                                                            <span title="Number of cache entries that had to be removed although they are not expired (increase cache size to reduce this number)">DNS cache evictions:</span>
+                                                            <span title="Number of cache entries that had to be removed although they are not expired (increase cache size to reduce this number)">Wyeksportowana Pamięć podręczna DNS</span>
                                                         </th>
                                                         <td id="cache-live-freed">&nbsp;</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            See also our <a href="https://docs.pi-hole.net/ftldns/dns-cache/" rel="noopener" target="_blank">DNS cache documentation</a>.
+                                            Zobacz także <a href="https://docs.pi-hole.net/ftldns/dns-cache/" rel="noopener" target="_blank">Dokumentacja pamięci podręcznej DNS</a>.
                                             <?php } else { ?>
-                                            <div>The FTL service is offline!</div>
+                                            <div>Usługa FTL jest offline!</div>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -375,33 +375,33 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                     <div class="row">
                                         <div class="col-md-4">
                                             <?php if ($piHoleLogging) { ?>
-                                                <button type="button" class="btn btn-warning confirm-disablelogging-noflush btn-block">Disable query logging</button>
+                                                <button type="button" class="btn btn-warning confirm-disablelogging-noflush btn-block">Wyłącz rejestrowanie zapytań</button>
                                             <?php } else { ?>
                                                 <form role="form" method="post">
                                                     <input type="hidden" name="action" value="Enable">
                                                     <input type="hidden" name="field" value="Logging">
                                                     <input type="hidden" name="token" value="<?php echo $token ?>">
-                                                    <button type="submit" class="btn btn-success btn-block">Enable query logging</button>
+                                                    <button type="submit" class="btn btn-success btn-block">Włącz rejestrowanie zapytań</button>
                                                 </form>
                                             <?php } ?>
                                         </div>
                                         <p class="hidden-md hidden-lg"></p>
                                         <div class="col-md-4">
-                                                <button type="button" class="btn btn-warning confirm-flusharp btn-block">Flush network table</button>
+                                                <button type="button" class="btn btn-warning confirm-flusharp btn-block">Opróżnij tabelę sieci</button>
                                         </div>
                                         <p class="hidden-md hidden-lg"></p>
                                         <div class="col-md-4">
-                                            <button type="button" class="btn btn-warning confirm-restartdns btn-block">Restart DNS resolver</button>
+                                            <button type="button" class="btn btn-warning confirm-restartdns btn-block">Restart rozpoznawania nazw DNS</button>
                                         </div>
                                     </div>
                                     <br/>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <button type="button" class="btn btn-danger confirm-flushlogs btn-block">Flush logs</button>
+                                            <button type="button" class="btn btn-danger confirm-flushlogs btn-block">Opróżnij dzienniki</button>
                                         </div>
                                         <p class="hidden-md hidden-lg"></p>
                                         <div class="col-md-4">
-                                            <button type="button" class="btn btn-danger confirm-poweroff btn-block">Power off system</button>
+                                            <button type="button" class="btn btn-danger confirm-poweroff btn-block">Wyłącz system</button>
                                         </div>
                                         <p class="hidden-md hidden-lg"></p>
                                         <div class="col-md-4">
