@@ -31,11 +31,11 @@
                         <select id="select" class="form-control" placeholder="">
                             <option disabled selected>Ładowanie...</option>
                         </select><br>
-                        <input id="ip-custom" type="text" class="form-control" disabled placeholder="Client IP address (IPv4 or IPv6, CIDR subnetting available, optional)" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off">
+                        <input id="ip-custom" type="text" class="form-control" disabled placeholder="Adres IP klienta (IPv4 lub IPv6, dostępne podsieci CIDR, opcjonalnie)" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="new_comment">Komentarz:</label>
-                        <input id="new_comment" type="text" class="form-control" placeholder="Client description (optional)">
+                        <input id="new_comment" type="text" class="form-control" placeholder="Opis klienta (opcjonalnie)">
                     </div>
                 </div>
             </div>
