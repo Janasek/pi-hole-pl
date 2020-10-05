@@ -7,7 +7,7 @@
 *    Please see LICENSE file for your rights under this license. */
     require "scripts/pi-hole/php/header.php";
     $type = "all";
-    $pagetitle = "Domain";
+    $pagetitle = "Domeny,";
     $adjective = "";
     if (isset($_GET['type']) && ($_GET['type'] === "white" || $_GET['type'] === "black")) {
         $type = $_GET['type'];
@@ -72,7 +72,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="new_regex">Wyrażenie regularne:</label>
-                                        <input id="new_regex" type="text" class="form-control active" placeholder="RegEx to be added">
+                                        <input id="new_regex" type="text" class="form-control active" placeholder="RegEx do dodania">
                                     </div>
                                     <div class="form-group">
                                         <strong>Trafienia:</strong> Potrzebujesz pomocy w napisaniu prawidłowej reguły RegEx? Zajrzyj do naszego serwisu online
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                         <label for="new_regex_comment">Komentarz:</label>
-                                        <input id="new_regex_comment" type="text" class="form-control" placeholder="Description (optional)">
+                                        <input id="new_regex_comment" type="text" class="form-control" placeholder="Opis (opcjonalnie)">
                                 </div>
                             </div>
                         </div>
