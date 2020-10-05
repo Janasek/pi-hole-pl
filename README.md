@@ -31,6 +31,4 @@ sudo git reset --hard
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-### Warning, this is the Polish version, do not install if you want to keep the original English language because it converts English to Polish
-
 ## Enjoy
