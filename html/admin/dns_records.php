@@ -30,11 +30,11 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="domain">Domena:</label>
-                        <input id="domain" type="url" class="form-control" placeholder="Add a domain (example.com or sub.example.com)" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off">
+                        <input id="domain" type="url" class="form-control" placeholder="Dodaj domenę (example.com lub sub.example.com)" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ip">Addres IP:</label>
-                        <input id="ip" type="text" class="form-control" placeholder="Associated IP address" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off">
+                        <input id="ip" type="text" class="form-control" placeholder="Powiązany adres IP" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off">
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     <tr>
                         <th>Domena</th>
                         <th>IP</th>
-                        <th>Action</th>
+                        <th>Akcja</th>
                     </tr>
                     </thead>
                 </table>
