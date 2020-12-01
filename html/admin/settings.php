@@ -58,7 +58,7 @@ if (isset($_POST["submit"])) {
     <div id="alError" class="alert alert-danger alert-dismissible fade in" role="alert">
         <button type="button" class="close" data-hide="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
         </button>
-        <h4><i class="icon fa fa-ban"></i> Błśd</h4>
+        <h4><i class="icon fa fa-ban"></i> Błąd</h4>
         <?php echo $error; ?>
     </div>
 <?php } ?>
@@ -445,10 +445,10 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                         <div class="col-md-12">
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Adlists used to generate Pi-hole's Gravity</h3>
+                                    <h3 class="box-title">Listy reklam używane do generowania grawitacji Pi-hole</h3>
                                 </div>
                                 <div class="box-body">
-                                    <p>Please use the <a href="groups-adlists.php">group management pages</a> to edit the adlists used by Pi-hole.</p>
+                                    <p>Proszę użyć <a href="groups-adlists.php">strony zarządzania grupą</a> do edycji list reklam używanych przez Pi-hole.</p>
                                 </div>
                             </div>
                         </div>
@@ -531,23 +531,23 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                             <div class="col-md-6">
                                 <div class="box box-warning">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">DHCP Settings</h3>
+                                        <h3 class="box-title">Ustawienia DHCP</h3>
                                     </div>
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div><input type="checkbox" name="active" id="DHCPchk" <?php if ($DHCP){ ?>checked<?php } ?>><label for="DHCPchk"><strong>DHCP server enabled</strong></label></div><br>
-                                                <p id="dhcpnotice" <?php if (!$DHCP){ ?>hidden<?php } ?>>Make sure your router's DHCP server is disabled when using the Pi-hole DHCP server!</p>
+                                                <div><input type="checkbox" name="active" id="DHCPchk" <?php if ($DHCP){ ?>checked<?php } ?>><label for="DHCPchk"><strong>Serwer DHCP włączony</strong></label></div><br>
+                                                <p id="dhcpnotice" <?php if (!$DHCP){ ?>hidden<?php } ?>>Upewnij się, że serwer DHCP routera jest wyłączony podczas korzystania z serwera DHCP Pi-hole!</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <label>Range of IP addresses to hand out</label>
+                                                <label>Zakres adresów IP do rozdania</label>
                                             </div>
                                             <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <div class="input-group-addon">From</div>
+                                                        <div class="input-group-addon">Od</div>
                                                         <input type="text" class="form-control DHCPgroup" name="from" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off"
                                                                value="<?php echo $DHCPstart; ?>"
                                                                <?php if (!$DHCP){ ?>disabled<?php } ?>>
@@ -557,7 +557,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                             <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <div class="input-group-addon">To</div>
+                                                        <div class="input-group-addon">Do</div>
                                                         <input type="text" class="form-control DHCPgroup" name="to" autocomplete="off" spellcheck="false" autocapitalize="none" autocorrect="off"
                                                                value="<?php echo $DHCPend; ?>"
                                                                <?php if (!$DHCP){ ?>disabled<?php } ?>>
@@ -585,15 +585,15 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                             <div class="col-md-6">
                                 <div class="box box-warning">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">Advanced DHCP settings</h3>
+                                        <h3 class="box-title">Zaawansowane ustawienia DHCP</h3>
                                     </div>
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <label>Pi-hole domain name</label>
+                                                <label>Nazwa domeny</label>
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <div class="input-group-addon">Domain</div>
+                                                        <div class="input-group-addon">Domena</div>
                                                         <input type="text" class="form-control DHCPgroup" name="domain"
                                                                value="<?php echo $piHoleDomain; ?>"
                                                                <?php if (!$DHCP){ ?>disabled<?php } ?>>
@@ -603,23 +603,23 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <label>DHCP lease time</label>
+                                                <label>Czas dzierżawy DHCP</label>
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <div class="input-group-addon">Lease time in hours</div>
+                                                        <div class="input-group-addon">Czas dzierżawy w godzinach</div>
                                                         <input type="number" class="form-control DHCPgroup"
                                                                name="leasetime"
                                                                id="leasetime" value="<?php echo $DHCPleasetime; ?>"
                                                                data-mask <?php if (!$DHCP){ ?>disabled<?php } ?>>
                                                     </div>
                                                 </div>
-                                                <p>Hint: 0 = infinite, 24 = one day, 168 = one week, 744 = one month, 8760 = one year</p>
+                                                <p>Wskazówka: 0 = infinite, 24 = 1 dzień, 168 = 1 tydzień, 744 = 1 miesiąc, 8760 = 1 rok</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div><input type="checkbox" name="useIPv6" id="useIPv6" class="DHCPgroup" <?php if ($DHCPIPv6){ ?>checked<?php }; if (!$DHCP){ ?> disabled<?php } ?>>&nbsp;<label for="useIPv6"><strong>Enable IPv6 support (SLAAC + RA)</strong></label></div>
-                                                <div><input type="checkbox" name="DHCP_rapid_commit" id="DHCP_rapid_commit" class="DHCPgroup" <?php if ($DHCP_rapid_commit){ ?>checked<?php }; if (!$DHCP){ ?> disabled<?php } ?>>&nbsp;<label for="DHCP_rapid_commit"><strong>Enable DHCP rapid commit (fast address assignment)</strong></label></div>
+                                                <div><input type="checkbox" name="useIPv6" id="useIPv6" class="DHCPgroup" <?php if ($DHCPIPv6){ ?>checked<?php }; if (!$DHCP){ ?> disabled<?php } ?>>&nbsp;<label for="useIPv6"><strong>Włącz obsługę IPv6 (SLAAC + RA)</strong></label></div>
+                                                <div><input type="checkbox" name="DHCP_rapid_commit" id="DHCP_rapid_commit" class="DHCPgroup" <?php if ($DHCP_rapid_commit){ ?>checked<?php }; if (!$DHCP){ ?> disabled<?php } ?>>&nbsp;<label for="DHCP_rapid_commit"><strong>Włącz szybkie zatwierdzanie DHCP (szybkie przypisywanie adresów)</strong></label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -694,17 +694,17 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                             <div class="col-md-12">
                                 <div class="box box-warning">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">DHCP leases</h3>
+                                        <h3 class="box-title">Dzierżawa DHCP</h3>
                                     </div>
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <label>Currently active DHCP leases</label>
+                                                <label>Aktualnie aktywne dzierżawy DHCP</label>
                                                 <table id="DHCPLeasesTable" class="table table-striped table-bordered nowrap" width="100%">
                                                     <thead>
                                                         <tr>
-                                                            <th>MAC address</th>
-                                                            <th>IP address</th>
+                                                            <th>Adres MAC</th>
+                                                            <th>Adres IP</th>
                                                             <th>Hostname</th>
                                                             <td></td>
                                                         </tr>
@@ -728,12 +728,12 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                 <br>
                                             </div>
                                             <div class="col-md-12">
-                                                <label>Static DHCP leases configuration</label>
+                                                <label>Statyczna konfiguracja dzierżawy DHCP</label>
                                                 <table id="DHCPStaticLeasesTable" class="table table-striped table-bordered nowrap" width="100%">
                                                     <thead>
                                                     <tr>
-                                                        <th>MAC address</th>
-                                                        <th>IP address</th>
+                                                        <th>Adres MAC</th>
+                                                        <th>Adres IP</th>
                                                         <th>Hostname</th>
                                                         <td></td>
                                                     </tr>
@@ -767,18 +767,18 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                         </tr>
                                                     </tfoot>
                                                 </table>
-                                                <p>Specifying the MAC address is mandatory and only one entry per MAC
-                                                   address is allowed. If the IP address is omitted and a host name is
-                                                   given, the IP address will still be generated dynamically and the
-                                                   specified host name will be used. If the host name is omitted, only
-                                                   a static lease will be added.</p>
+                                                <p>Określenie adresu MAC jest obowiązkowe i tylko jeden wpis na adres MAC
+                                                   adres jest dozwolony. Jeśli adres IP zostanie pominięty, a nazwa hosta to
+                                                   biorąc pod uwagę, adres IP będzie nadal generowany dynamicznie, a rozszerzenie
+                                                   zostanie użyta określona nazwa hosta. Tylko jeśli pominięto nazwę hosta
+                                                   zostanie dodana dzierżawa statyczna.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <input type="hidden" name="field" value="DHCP">
                                 <input type="hidden" name="token" value="<?php echo $token ?>">
-                                <button type="submit" class="btn btn-primary pull-right">Save</button>
+                                <button type="submit" class="btn btn-primary pull-right">Zapisz</button>
                             </div>
                         </div>
                     </form>
