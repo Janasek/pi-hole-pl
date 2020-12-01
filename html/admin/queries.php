@@ -32,13 +32,13 @@ else
 {
 	// If filter variable is not set, we
 	// automatically show all queries
-	$showing = "pokazuje";
+	$showing = "showing";
 }
 
 $showall = false;
 if(isset($_GET["all"]))
 {
-	$showing .= " wszystkie zapytania w dzienniku Pi-hole";
+	$showing .= " all queries within the Pi-hole log";
 }
 else if(isset($_GET["client"]))
 {
@@ -54,7 +54,7 @@ else if(isset($_GET["from"]) || isset($_GET["until"]))
 }
 else
 {
-	$showing .= " do 100 zapytań";
+	$showing .= " up to 100 queries";
 	$showall = true;
 }
 
@@ -71,7 +71,7 @@ if(strlen($showing) > 0)
 {
 	$showing = "(".$showing.")";
 	if($showall)
-		$showing .= ", <a href=\"?all\">pokaż wsztstko</a>";
+		$showing .= ", <a href=\"?all\">show all</a>";
 }
 ?>
 
@@ -94,8 +94,8 @@ if(strlen($showing) > 0)
                             <i class="fa fa-times fa-stack-1x fa-inverse"></i>
                         </div>
                     </span>
-                    <div class="alProcessing">Dodaję <span id="alDomain"></span> do <span id="alList"></span>...</div>
-                    <div class="alSuccess text-bold text-green" style="display: none"><span id="alDomain"></span> pomyślnie dodane do <span id="alList"></span></div>
+                    <div class="alProcessing">Dodaj <span id="alDomain"></span> do <span id="alList"></span>...</div>
+                    <div class="alSuccess text-bold text-green" style="display: none"><span id="alDomain"></span> pomyślnie dodany do <span id="alList"></span></div>
                     <div class="alFailure text-bold text-red" style="display: none">
                         <span id="alNetErr">Przekroczony limit czasu lub błąd połączenia sieciowego!</span>
                         <span id="alCustomErr"></span>
@@ -120,9 +120,9 @@ if(strlen($showing) > 0)
                         <th>Czas</th>
                         <th>Typ</th>
                         <th>Domena</th>
-                        <th>Klient</th>
+                        <th>Client</th>
                         <th>Status</th>
-                        <th>Powtórzeń</th>
+                        <th>Odpowiedzi</th>
                         <th>Akcja</th>
                     </tr>
                 </thead>
@@ -131,9 +131,9 @@ if(strlen($showing) > 0)
                         <th>Czas</th>
                         <th>Typ</th>
                         <th>Domena</th>
-                        <th>Klient</th>
+                        <th>Client</th>
                         <th>Status</th>
-                        <th>Powtórzeń</th>
+                        <th>Odpowiedzi</th>
                         <th>Akcja</th>
                     </tr>
                 </tfoot>
